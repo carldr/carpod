@@ -85,7 +85,7 @@ NSArray *get_playlists() {
 		ETPlaylist *foundPlaylist = nil;
 
 		for ( ETPlaylist *playlist in [eyetunes playlists] ) {
-			if ( [[NSString stringWithFormat:@"--- %d", i] isEqualToString:[playlist name]] ) {
+			if ( [[NSString stringWithFormat:@"- %d", i] isEqualToString:[playlist name]] ) {
 				foundPlaylist = playlist;
 				
 				break;
@@ -99,11 +99,11 @@ NSArray *get_playlists() {
 			NSAppleScript *emptyPlaylist;
 			NSDictionary *error = nil;
 			
-			NSString *emptyPlaylistString = [NSString stringWithFormat:@"tell application \"iTunes\"\ndelete every track of playlist \"--- %d\"\nend tell", i];
+			NSString *emptyPlaylistString = [NSString stringWithFormat:@"tell application \"iTunes\"\ndelete every track of playlist \"- %d\"\nend tell", i];
 			emptyPlaylist = [[NSAppleScript alloc] initWithSource:emptyPlaylistString];
 			
 			if (![emptyPlaylist executeAndReturnError:&error]) {
-				printf( "Couldn't ensure that playlist '--- %d' is empty.  Error: %s", i, [[error objectForKey:@"NSAppleScriptErrorMessage"] cStringUsingEncoding:NSUTF8StringEncoding] );
+				printf( "Couldn't ensure that playlist '- %d' is empty.  Error: %s", i, [[error objectForKey:@"NSAppleScriptErrorMessage"] cStringUsingEncoding:NSUTF8StringEncoding] );
 				return NO;
 			}
 			
@@ -115,16 +115,16 @@ NSArray *get_playlists() {
 		NSAppleScript *createPlaylist;
 		NSDictionary *error = nil;
 
-		NSString *createPlaylistString = [NSString stringWithFormat:@"tell application \"iTunes\"\nset aPlaylist to make new playlist with properties {name:\"--- %d\"}\nend tell", i ];
+		NSString *createPlaylistString = [NSString stringWithFormat:@"tell application \"iTunes\"\nset aPlaylist to make new playlist with properties {name:\"- %d\"}\nend tell", i ];
 		createPlaylist = [[NSAppleScript alloc] initWithSource:createPlaylistString];
 
 		if (![createPlaylist executeAndReturnError:&error]) {
-			printf( "Couldn't create playlist '--- %d'.  Error: %s", i, [[error objectForKey:@"NSAppleScriptErrorMessage"] cStringUsingEncoding:NSUTF8StringEncoding] );
+			printf( "Couldn't create playlist '- %d'.  Error: %s", i, [[error objectForKey:@"NSAppleScriptErrorMessage"] cStringUsingEncoding:NSUTF8StringEncoding] );
 			return NO;
 		}
 		
 		for ( ETPlaylist *playlist in [eyetunes playlists] ) {
-			if ( [[NSString stringWithFormat:@"--- %d", i] isEqualToString:[playlist name]] ) {
+			if ( [[NSString stringWithFormat:@"- %d", i] isEqualToString:[playlist name]] ) {
 				foundPlaylist = playlist;
 				
 				break;
@@ -132,7 +132,7 @@ NSArray *get_playlists() {
 		}
 		
 		if ( !foundPlaylist ) {
-			printf( "Couldn't find newly create playlist '--- %d'.\n", i );
+			printf( "Couldn't find newly create playlist '- %d'.\n", i );
 			return nil;
 		}
 
@@ -184,11 +184,11 @@ BOOL tie_em_up( NSArray *playlists, NSArray *albums ) {
 		NSAppleScript *addToPlaylist;
 		NSDictionary *error = nil;
 		
-		NSString *addToPlaylistString = [NSString stringWithFormat:@"tell application \"iTunes\"\nduplicate (every track of library playlist 1 whose (artist is \"%@\" and album is \"%@\")) to playlist \"--- %@\"\nend tell", [[albums objectAtIndex:i] objectForKey:@"artist"], [[albums objectAtIndex:i] objectForKey:@"album"], [number stringValue] ];
+		NSString *addToPlaylistString = [NSString stringWithFormat:@"tell application \"iTunes\"\nduplicate (every track of library playlist 1 whose (artist is \"%@\" and album is \"%@\")) to playlist \"- %@\"\nend tell", [[albums objectAtIndex:i] objectForKey:@"artist"], [[albums objectAtIndex:i] objectForKey:@"album"], [number stringValue] ];
 		addToPlaylist = [[NSAppleScript alloc] initWithSource:addToPlaylistString];
 		
 		if (![addToPlaylist executeAndReturnError:&error]) {
-			printf( "Couldn't add tracks from '%s' by %s to playlist '--- %d'.  Error: %s", [[[albums objectAtIndex:i] objectForKey:@"album"] cStringUsingEncoding:NSUTF8StringEncoding],
+			printf( "Couldn't add tracks from '%s' by %s to playlist '- %d'.  Error: %s", [[[albums objectAtIndex:i] objectForKey:@"album"] cStringUsingEncoding:NSUTF8StringEncoding],
 				                                                                            [[[albums objectAtIndex:i] objectForKey:@"artist"] cStringUsingEncoding:NSUTF8StringEncoding],
 																					        i,
 																					        [[error objectForKey:@"NSAppleScriptErrorMessage"] cStringUsingEncoding:NSUTF8StringEncoding] );
