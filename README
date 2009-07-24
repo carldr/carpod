@@ -9,7 +9,7 @@ From the Audi concert operating manual, about the iPod inteface :
 
 "The sound system allocates the playlists on the iPod to disc numbers CD 1
 to CD5.  The playlists are allocated first in numerical order then in
-alphabetical order.  The easiest way to use playlists on the car's
+t;alphabetical order.  The easiest way to use playlists on the car's
 entertainment system is to create five playlists on the iPod (e.g. 1 to 5.)
 
 "If you select disc number CD 6, all the tracks on the iPod will be played
@@ -80,4 +80,3 @@ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 
 json-framework is released under the New BSD license.
-P
