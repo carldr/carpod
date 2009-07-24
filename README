@@ -19,11 +19,25 @@ will not be changed until the next time you change the CD.
 
 If your iPod adapter works like this, Carpod might be for you.
 
-Requirements
-------------
+Carpod is written for, and will only work with, OS X.  It's only been tested
+on Leopard 10.5.7.
+
+Getting Carpod
+--------------
+
+You can get the source from http://github.com/carldr/carpod/tree/master.
+
+You can also get a binary (Which won't be too far behind the repostiory) and
+a pre-built EyeTunes framework from http://github.com/carldr/carpod/downloads.
+You need to put EyeTunes.framework (uncompressed) in ~/Library/Frameworks.  You
+can run Carpod from wherever you like.
+
+Building From Source
+--------------------
 
 You'll need to get hold of EyeTunes from http://code.google.com/p/eyetunes/,
-and build it, and put the resultant framework in ~/Library/Frameworks.
+and build it, and put the resultant framework in ~/Library/Frameworks.  (Or
+get the pre-built binary as above.)
 
 Then build carpod.  You'll end up with a command line utility in
 build/Release.  Put it somewhere your shell will find it.
