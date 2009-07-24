@@ -1,0 +1,306 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 45;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		8DD76FAC0486AB0100D96B5E /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = 08FB7796FE84155DC02AAC07 /* main.c */; settings = {ATTRIBUTES = (); }; };
+		C37581301019ADEC00488B64 /* carpod.m in Sources */ = {isa = PBXBuildFile; fileRef = C375812F1019ADEC00488B64 /* carpod.m */; };
+		C37581331019AE0400488B64 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C37581321019AE0400488B64 /* Cocoa.framework */; };
+		C37581961019B23A00488B64 /* EyeTunes.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C37581951019B23A00488B64 /* EyeTunes.framework */; };
+		C3F959CD1019C5D100E85BC6 /* NSObject+SBJSON.m in Sources */ = {isa = PBXBuildFile; fileRef = C3F959C21019C5D100E85BC6 /* NSObject+SBJSON.m */; };
+		C3F959CE1019C5D100E85BC6 /* NSString+SBJSON.m in Sources */ = {isa = PBXBuildFile; fileRef = C3F959C41019C5D100E85BC6 /* NSString+SBJSON.m */; };
+		C3F959CF1019C5D100E85BC6 /* SBJSON.m in Sources */ = {isa = PBXBuildFile; fileRef = C3F959C61019C5D100E85BC6 /* SBJSON.m */; };
+		C3F959D01019C5D100E85BC6 /* SBJsonBase.m in Sources */ = {isa = PBXBuildFile; fileRef = C3F959C81019C5D100E85BC6 /* SBJsonBase.m */; };
+		C3F959D11019C5D100E85BC6 /* SBJsonParser.m in Sources */ = {isa = PBXBuildFile; fileRef = C3F959CA1019C5D100E85BC6 /* SBJsonParser.m */; };
+		C3F959D21019C5D100E85BC6 /* SBJsonWriter.m in Sources */ = {isa = PBXBuildFile; fileRef = C3F959CC1019C5D100E85BC6 /* SBJsonWriter.m */; };
+		C3F959E51019C74E00E85BC6 /* ScrobbleBase.m in Sources */ = {isa = PBXBuildFile; fileRef = C3F959DC1019C74E00E85BC6 /* ScrobbleBase.m */; };
+		C3F959E61019C74E00E85BC6 /* ScrobbleRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = C3F959DE1019C74E00E85BC6 /* ScrobbleRequest.m */; };
+		C3F959E71019C74E00E85BC6 /* ScrobbleSynchronousRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = C3F959E01019C74E00E85BC6 /* ScrobbleSynchronousRequest.m */; };
+		C3F959E81019C74E00E85BC6 /* ScrobbleTrack.m in Sources */ = {isa = PBXBuildFile; fileRef = C3F959E21019C74E00E85BC6 /* ScrobbleTrack.m */; };
+		C3F959E91019C74E00E85BC6 /* ScrobbleUser.m in Sources */ = {isa = PBXBuildFile; fileRef = C3F959E41019C74E00E85BC6 /* ScrobbleUser.m */; };
+		C3F95A331019C91200E85BC6 /* libcrypto.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = C3F95A321019C91200E85BC6 /* libcrypto.dylib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		08FB7796FE84155DC02AAC07 /* main.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = main.c; sourceTree = "<group>"; };
+		8DD76FB20486AB0100D96B5E /* carpod */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = carpod; sourceTree = BUILT_PRODUCTS_DIR; };
+		C375812E1019ADEC00488B64 /* carpod.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = carpod.h; sourceTree = "<group>"; };
+		C375812F1019ADEC00488B64 /* carpod.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = carpod.m; sourceTree = "<group>"; };
+		C37581321019AE0400488B64 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		C37581951019B23A00488B64 /* EyeTunes.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = EyeTunes.framework; path = ../../../Library/Frameworks/EyeTunes.framework; sourceTree = SOURCE_ROOT; };
+		C3F959C01019C5D100E85BC6 /* JSON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSON.h; sourceTree = "<group>"; };
+		C3F959C11019C5D100E85BC6 /* NSObject+SBJSON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+SBJSON.h"; sourceTree = "<group>"; };
+		C3F959C21019C5D100E85BC6 /* NSObject+SBJSON.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+SBJSON.m"; sourceTree = "<group>"; };
+		C3F959C31019C5D100E85BC6 /* NSString+SBJSON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+SBJSON.h"; sourceTree = "<group>"; };
+		C3F959C41019C5D100E85BC6 /* NSString+SBJSON.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+SBJSON.m"; sourceTree = "<group>"; };
+		C3F959C51019C5D100E85BC6 /* SBJSON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJSON.h; sourceTree = "<group>"; };
+		C3F959C61019C5D100E85BC6 /* SBJSON.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJSON.m; sourceTree = "<group>"; };
+		C3F959C71019C5D100E85BC6 /* SBJsonBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJsonBase.h; sourceTree = "<group>"; };
+		C3F959C81019C5D100E85BC6 /* SBJsonBase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJsonBase.m; sourceTree = "<group>"; };
+		C3F959C91019C5D100E85BC6 /* SBJsonParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJsonParser.h; sourceTree = "<group>"; };
+		C3F959CA1019C5D100E85BC6 /* SBJsonParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJsonParser.m; sourceTree = "<group>"; };
+		C3F959CB1019C5D100E85BC6 /* SBJsonWriter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJsonWriter.h; sourceTree = "<group>"; };
+		C3F959CC1019C5D100E85BC6 /* SBJsonWriter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJsonWriter.m; sourceTree = "<group>"; };
+		C3F959DB1019C74E00E85BC6 /* ScrobbleBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScrobbleBase.h; sourceTree = "<group>"; };
+		C3F959DC1019C74E00E85BC6 /* ScrobbleBase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScrobbleBase.m; sourceTree = "<group>"; };
+		C3F959DD1019C74E00E85BC6 /* ScrobbleRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScrobbleRequest.h; sourceTree = "<group>"; };
+		C3F959DE1019C74E00E85BC6 /* ScrobbleRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScrobbleRequest.m; sourceTree = "<group>"; };
+		C3F959DF1019C74E00E85BC6 /* ScrobbleSynchronousRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScrobbleSynchronousRequest.h; sourceTree = "<group>"; };
+		C3F959E01019C74E00E85BC6 /* ScrobbleSynchronousRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScrobbleSynchronousRequest.m; sourceTree = "<group>"; };
+		C3F959E11019C74E00E85BC6 /* ScrobbleTrack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScrobbleTrack.h; sourceTree = "<group>"; };
+		C3F959E21019C74E00E85BC6 /* ScrobbleTrack.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScrobbleTrack.m; sourceTree = "<group>"; };
+		C3F959E31019C74E00E85BC6 /* ScrobbleUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScrobbleUser.h; sourceTree = "<group>"; };
+		C3F959E41019C74E00E85BC6 /* ScrobbleUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScrobbleUser.m; sourceTree = "<group>"; };
+		C3F95A321019C91200E85BC6 /* libcrypto.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libcrypto.dylib; path = usr/lib/libcrypto.dylib; sourceTree = SDKROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		8DD76FAD0486AB0100D96B5E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C37581331019AE0400488B64 /* Cocoa.framework in Frameworks */,
+				C37581961019B23A00488B64 /* EyeTunes.framework in Frameworks */,
+				C3F95A331019C91200E85BC6 /* libcrypto.dylib in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		08FB7794FE84155DC02AAC07 /* carpod */ = {
+			isa = PBXGroup;
+			children = (
+				08FB7795FE84155DC02AAC07 /* Source */,
+				1AB674ADFE9D54B511CA2CBB /* Products */,
+				C375818F1019B1E600488B64 /* Frameworks */,
+			);
+			name = carpod;
+			sourceTree = "<group>";
+		};
+		08FB7795FE84155DC02AAC07 /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				C3F959DA1019C74E00E85BC6 /* Scrobble */,
+				C3F959BF1019C5D100E85BC6 /* JSON */,
+				08FB7796FE84155DC02AAC07 /* main.c */,
+				C375812E1019ADEC00488B64 /* carpod.h */,
+				C375812F1019ADEC00488B64 /* carpod.m */,
+			);
+			name = Source;
+			sourceTree = "<group>";
+		};
+		1AB674ADFE9D54B511CA2CBB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8DD76FB20486AB0100D96B5E /* carpod */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C375818F1019B1E600488B64 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C3F95A371019C93300E85BC6 /* Dylibs */,
+				C37581951019B23A00488B64 /* EyeTunes.framework */,
+				C37581321019AE0400488B64 /* Cocoa.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C3F959BF1019C5D100E85BC6 /* JSON */ = {
+			isa = PBXGroup;
+			children = (
+				C3F959C01019C5D100E85BC6 /* JSON.h */,
+				C3F959C11019C5D100E85BC6 /* NSObject+SBJSON.h */,
+				C3F959C21019C5D100E85BC6 /* NSObject+SBJSON.m */,
+				C3F959C31019C5D100E85BC6 /* NSString+SBJSON.h */,
+				C3F959C41019C5D100E85BC6 /* NSString+SBJSON.m */,
+				C3F959C51019C5D100E85BC6 /* SBJSON.h */,
+				C3F959C61019C5D100E85BC6 /* SBJSON.m */,
+				C3F959C71019C5D100E85BC6 /* SBJsonBase.h */,
+				C3F959C81019C5D100E85BC6 /* SBJsonBase.m */,
+				C3F959C91019C5D100E85BC6 /* SBJsonParser.h */,
+				C3F959CA1019C5D100E85BC6 /* SBJsonParser.m */,
+				C3F959CB1019C5D100E85BC6 /* SBJsonWriter.h */,
+				C3F959CC1019C5D100E85BC6 /* SBJsonWriter.m */,
+			);
+			path = JSON;
+			sourceTree = "<group>";
+		};
+		C3F959DA1019C74E00E85BC6 /* Scrobble */ = {
+			isa = PBXGroup;
+			children = (
+				C3F959DB1019C74E00E85BC6 /* ScrobbleBase.h */,
+				C3F959DC1019C74E00E85BC6 /* ScrobbleBase.m */,
+				C3F959DD1019C74E00E85BC6 /* ScrobbleRequest.h */,
+				C3F959DE1019C74E00E85BC6 /* ScrobbleRequest.m */,
+				C3F959DF1019C74E00E85BC6 /* ScrobbleSynchronousRequest.h */,
+				C3F959E01019C74E00E85BC6 /* ScrobbleSynchronousRequest.m */,
+				C3F959E11019C74E00E85BC6 /* ScrobbleTrack.h */,
+				C3F959E21019C74E00E85BC6 /* ScrobbleTrack.m */,
+				C3F959E31019C74E00E85BC6 /* ScrobbleUser.h */,
+				C3F959E41019C74E00E85BC6 /* ScrobbleUser.m */,
+			);
+			path = Scrobble;
+			sourceTree = "<group>";
+		};
+		C3F95A371019C93300E85BC6 /* Dylibs */ = {
+			isa = PBXGroup;
+			children = (
+				C3F95A321019C91200E85BC6 /* libcrypto.dylib */,
+			);
+			name = Dylibs;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		8DD76FA90486AB0100D96B5E /* carpod */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1DEB928508733DD80010E9CD /* Build configuration list for PBXNativeTarget "carpod" */;
+			buildPhases = (
+				8DD76FAB0486AB0100D96B5E /* Sources */,
+				8DD76FAD0486AB0100D96B5E /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = carpod;
+			productInstallPath = "$(HOME)/bin";
+			productName = carpod;
+			productReference = 8DD76FB20486AB0100D96B5E /* carpod */;
+			productType = "com.apple.product-type.tool";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		08FB7793FE84155DC02AAC07 /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = 1DEB928908733DD80010E9CD /* Build configuration list for PBXProject "carpod" */;
+			compatibilityVersion = "Xcode 3.1";
+			hasScannedForEncodings = 1;
+			mainGroup = 08FB7794FE84155DC02AAC07 /* carpod */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				8DD76FA90486AB0100D96B5E /* carpod */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		8DD76FAB0486AB0100D96B5E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8DD76FAC0486AB0100D96B5E /* main.c in Sources */,
+				C37581301019ADEC00488B64 /* carpod.m in Sources */,
+				C3F959CD1019C5D100E85BC6 /* NSObject+SBJSON.m in Sources */,
+				C3F959CE1019C5D100E85BC6 /* NSString+SBJSON.m in Sources */,
+				C3F959CF1019C5D100E85BC6 /* SBJSON.m in Sources */,
+				C3F959D01019C5D100E85BC6 /* SBJsonBase.m in Sources */,
+				C3F959D11019C5D100E85BC6 /* SBJsonParser.m in Sources */,
+				C3F959D21019C5D100E85BC6 /* SBJsonWriter.m in Sources */,
+				C3F959E51019C74E00E85BC6 /* ScrobbleBase.m in Sources */,
+				C3F959E61019C74E00E85BC6 /* ScrobbleRequest.m in Sources */,
+				C3F959E71019C74E00E85BC6 /* ScrobbleSynchronousRequest.m in Sources */,
+				C3F959E81019C74E00E85BC6 /* ScrobbleTrack.m in Sources */,
+				C3F959E91019C74E00E85BC6 /* ScrobbleUser.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		1DEB928608733DD80010E9CD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/../eyetunes/build/Release\"",
+					"\"$(SRCROOT)/../../../Library/Frameworks\"",
+				);
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				INSTALL_PATH = /usr/local/bin;
+				PRODUCT_NAME = carpod;
+			};
+			name = Debug;
+		};
+		1DEB928708733DD80010E9CD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/../eyetunes/build/Release\"",
+					"\"$(SRCROOT)/../../../Library/Frameworks\"",
+				);
+				GCC_MODEL_TUNING = G5;
+				INSTALL_PATH = /usr/local/bin;
+				PRODUCT_NAME = carpod;
+			};
+			name = Release;
+		};
+		1DEB928A08733DD80010E9CD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PREBINDING = NO;
+				SDKROOT = macosx10.5;
+			};
+			name = Debug;
+		};
+		1DEB928B08733DD80010E9CD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				PREBINDING = NO;
+				SDKROOT = macosx10.5;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1DEB928508733DD80010E9CD /* Build configuration list for PBXNativeTarget "carpod" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1DEB928608733DD80010E9CD /* Debug */,
+				1DEB928708733DD80010E9CD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1DEB928908733DD80010E9CD /* Build configuration list for PBXProject "carpod" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1DEB928A08733DD80010E9CD /* Debug */,
+				1DEB928B08733DD80010E9CD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 08FB7793FE84155DC02AAC07 /* Project object */;
+}
