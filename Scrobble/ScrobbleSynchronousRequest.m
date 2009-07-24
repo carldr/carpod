@@ -24,11 +24,9 @@
 		[request setValue:@"StalkFM v0.1" forHTTPHeaderField:@"User-Agent"];
 		
 		// TODO: error-checking.
-		NSLog( @"Making synchronous request" );
 		data = [NSURLConnection sendSynchronousRequest:request returningResponse:&returningResponse error:&error];
 
 		NSString *str = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
-		NSLog( @"Done with synchronous request", str );
 		
 		jsonData = [str JSONValue];
 	}
