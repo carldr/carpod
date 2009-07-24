@@ -55,12 +55,15 @@ Carpod should be ran from a terminal, and takes one argument - A last.fm
 username, which Carpod will then interrogate to find the top five albums
 that that user has listened to in the past three months.
 
-Carpod will then create playlists numbered 1-5, and add those albums to
-those playlists with the most listened to album in playlist 1.  The albums
-need to be in your iTunes playlist.  For this reason, when you're asked for a
-username, it's probably best to use your own.
+Carpod will then create playlists numbered '--- 1' to '--- 5', and add those
+albums to those playlists with the most listened to album in playlist '--- 1'.
+The albums need to be in your iTunes playlist.  For this reason, when you're
+asked for a username, it's probably best to use your own.
 
-Make sure playlists 1-5 sync to your iPod, and sync them.  Then get in your
+The playlists are named '--- 1' etc to ensure that they sort before playlists named
+things like '1980s', like I have.
+
+Make sure the new playlists sync to your iPod, and sync them.  Then get in your
 car and rock the fuck out.
 
 More Information
