@@ -32,6 +32,12 @@ a pre-built EyeTunes framework from http://github.com/carldr/carpod/downloads.
 You need to put EyeTunes.framework (uncompressed) in ~/Library/Frameworks.  You
 can run Carpod from wherever you like.
 
+Before you run Carpod, you need to make it executable :
+
+% cd /path/to/where/carpod/is
+% chmod +x carpod
+% ./carpod your_last_fm_username
+
 Building From Source
 --------------------
 
