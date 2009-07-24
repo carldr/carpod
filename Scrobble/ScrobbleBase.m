@@ -14,7 +14,6 @@
 @implementation ScrobbleBase
 
 NSString *LAST_FM_API_KEY = @"8252ee20d19e64284ff60c8e952eee4f";  // TODO: #define?
-NSString *LAST_FM_SECRET = @"###";  // TODO: #define?  Obfuscate?
 
 - (NSString *)urlEncode:(NSString *)param {
 	NSString *result = [param stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
@@ -48,30 +47,7 @@ NSString *LAST_FM_SECRET = @"###";  // TODO: #define?  Obfuscate?
 		[methodSignature appendString:[theParams objectForKey:param]];
 	}
 	
-	[methodSignature appendString:LAST_FM_SECRET];
-	
 	return [self md5HashForString:methodSignature];
-}
-
-- (NSString *)sessionToken {
-	static NSString *_sessionToken;
-	
-	@synchronized( self ) {
-		if ( !_sessionToken ) {
-			NSMutableString *authToken = [NSMutableString stringWithString:@"carldr"];
-			[authToken appendString:[self md5HashForString:@"CHEESE"]];
-
-			NSDictionary *data = [self makeSynchronousRequestToService:@"auth.getMobileSession"
-			                           params:[NSDictionary dictionaryWithObjectsAndKeys:@"carldr", @"username",
-			                                                                             [self md5HashForString:authToken], @"authToken",
-			                                                                             nil]
-			                           withAuthentication:NO];
-			
-			_sessionToken = [[data objectForKey:@"session"] objectForKey:@"key"];
-		}
-	}
-	
-	return _sessionToken;
 }
 
 - (NSURL *)buildURLForService:(NSString *)theService params:(NSDictionary *)theParams withAuthentication:(BOOL)requiresAuthentication {
@@ -86,12 +62,7 @@ NSString *LAST_FM_SECRET = @"###";  // TODO: #define?  Obfuscate?
 	}
 	
 	if ( requiresAuthentication ) {
-		if ( ![self sessionToken] ) {
-			return nil;
-		}
-		
-		// TODO: Throw error if the session key isn't valid.
-		[paramsToSend setObject:[self sessionToken] forKey:@"sk"];
+		// REMOVED FROM VERSION DISTRIBUTED WITH CARPOD
 	}
 
 	[paramsToSend setObject:[self buildMethodSignature:paramsToSend] forKey:@"api_sig"];
