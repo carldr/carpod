@@ -10,5 +10,10 @@
 #include "carpod.h"
 
 int main(int argc, const char * argv[]) {
-	return run();
+	if ( argc != 2 ) {
+		printf( "You need to supply a last.fm username (and only a last.fm username) as an argument.\n" );
+		return 1;
+	}
+	
+	return run( argv[1] );
 }

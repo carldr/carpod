@@ -21,12 +21,12 @@ ScrobbleBase *scrobbleBase = NULL;
 void init();
 void cleanup();
 NSArray *get_playlists();
-NSArray *get_albums();
+NSArray *get_albums( const char *username );
 BOOL tie_em_up( NSArray *playlists, NSArray *albums );
 NSInteger trackSort( id num1, id num2, void *context );
 
 // This is where is all starts.  The value we return here is what is returned as the app's return code.
-int run() {
+int run( const char *username ) {
 	init();
 
 	eyetunes = [EyeTunes sharedInstance];
@@ -42,7 +42,7 @@ int run() {
 		return EXIT_ERROR;
 	}
 
-	NSArray *ourAlbums = get_albums();
+	NSArray *ourAlbums = get_albums( username );
 	if ( !ourAlbums ) {
 		cleanup();
 		return EXIT_ERROR;
@@ -144,12 +144,12 @@ NSArray *get_playlists() {
 }
 
 //  Returns an array of up to the five most played albums in the past 3 months
-NSArray *get_albums() {
+NSArray *get_albums( const char *username ) {
 	int count = 0;
 	NSMutableArray *ourAlbums = [[NSMutableArray alloc] init];
 
 	NSDictionary *albums =  [scrobbleBase makeSynchronousRequestToService:@"user.getTopAlbums"
-																   params:[NSDictionary dictionaryWithObjectsAndKeys:@"carldr", @"user", @"3month", @"period", nil]
+																   params:[NSDictionary dictionaryWithObjectsAndKeys:[NSString stringWithCString:username], @"user", @"3month", @"period", nil]
                                                        withAuthentication:NO];
 	
 	for ( NSDictionary *album in [[albums objectForKey:@"topalbums"] objectForKey:@"album"] ) {

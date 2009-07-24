@@ -9,4 +9,4 @@
 #define EXIT_OK 0
 #define EXIT_ERROR 1
 
-int run();
+int run( const char *username );
